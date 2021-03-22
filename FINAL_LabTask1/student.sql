@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2021 at 12:48 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.27
+-- Generation Time: Mar 22, 2021 at 04:07 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -45,8 +44,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`username`, `password`, `firstname`, `email`, `address`, `dob`, `gender`, `profession`, `interests`) VALUES
-('hsa10', '123456', 'bob', 'sazzad123@aiub.edu', 'aaa', '1990-12-23', 'male', 'Academician', 'music'),
-('jhon', '123', 'jhon', 'jhon@email.com', 'bashundhara', '1990-12-23', 'male', 'student', 'sports');
+('hsa10', '1234', 'Hassan', 'hasan@gmail.com', 'Bashundhara', '1992-02-04', 'male', 'Engineer', 'music+sports+videoGames+++'),
+('jhon', '123', 'jhon', 'jhon@email.com', 'bashundhara', '1992-02-05', 'male', 'student', 'sports');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

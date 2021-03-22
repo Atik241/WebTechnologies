@@ -22,6 +22,8 @@ Hii, <h3><?php echo $_SESSION["username"];?></h3>
 <?php
 $radio1=$radio2=$radio3="";
 $firstname=$email=$password=$address=$date=$profession="";
+$checkbox1=$checkbox2=$checkbox3=$checkbox4=$checkbox5=$checkbox6="";
+$option1=$option2=$option3=$option4=$option5=$option6=$option7=$option8="";
 $connection = new db();
 $conobj=$connection->OpenCon();
 
@@ -41,7 +43,7 @@ if ($userQuery->num_rows > 0) {
       $in = "";
       $pattern="/[+]/";
       $in = preg_split($pattern,$interests);
-      $checkbox1=$checkbox2=$checkbox3=$checkbox4=$checkbox5=$checkbox6="";
+      
       if($in[0]=='music'|| $in[1]=='music' || $in[2]=='music' || $in[3]=='music' || $in[4]=='music' || $in[5]=='music'){
         $checkbox1 = "checked";
       }
@@ -67,7 +69,7 @@ if ($userQuery->num_rows > 0) {
       { $radio2="checked"; }
       else{$radio3="checked";}
 
-      $option1=$option2=$option3=$option4=$option5=$option6=$option7=$option8="";
+     
       
       if($profession=="Accountant" )
       { $option1="selected"; }
@@ -92,7 +94,7 @@ if ($userQuery->num_rows > 0) {
     echo "0 results";
   }
 
-echo $option5;
+
 ?>
 <form action='' method='post'>
 firstname: <input type='text' name='firstname' value="<?php echo $firstname; ?>" >
@@ -110,6 +112,7 @@ Date: <input type="date" name='dob' value="<?php echo $dob; ?>">
      <input type='radio' name='gender' value='male' <?php echo $radio2; ?> >Male
      <input type='radio' name='gender' value='other'<?php echo $radio3; ?> > Other
 <br>
+
 <label for="profession">Profession: </label>
 <select name="profession">
   <option value="Accountant" <?php echo $option1;?>>Accountant</option>
@@ -122,6 +125,7 @@ Date: <input type="date" name='dob' value="<?php echo $dob; ?>">
   <option value="Student" <?php echo $option8;?>>Student</option>
 </select> 
 <br>
+
 <label for="interest">Interest: </label>
 <input type="checkbox" name="interest1" value='music' <?php echo $checkbox1; ?>>
 <label for="interest1">Music</label>
