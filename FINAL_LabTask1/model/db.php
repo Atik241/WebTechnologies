@@ -13,7 +13,7 @@ function OpenCon()
  }
  function CheckUser($conn,$table,$username,$password)
  {
-$result = $conn->query("SELECT * FROM ". $table." WHERE username='". $username."' AND password='". $password."'");
+$result = $conn->query("SELECT * FROM ". $table." WHERE username='". $username."'");
  return $result;
  }
 
